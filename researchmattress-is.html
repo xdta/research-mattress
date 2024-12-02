@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type 2 Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f6f4;
+      color: black;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 100vw;
+      padding:5%;
+      position: relative;
+    }
+
+    .image-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .text-over-image {
+        text-align: left;
+      position: absolute;
+      top: 10%;
+      /* right: 5%; */
+      /* background-color: rgba(255, 255, 255, 0.8); Optional background for better readability */
+      padding: 10px;
+      font-size: 3rem;
+    }
+
+    .image-top {
+      width: 98%;
+      height: auto;
+    }
+
+    .image-sleep {
+        max-width:30%;
+        margin-top: 15%;
+    }
+    
+
+    .text-below-image {
+      text-align: center;
+      margin-top: 1%;
+      font-size:3rem;
+    }
+
+    /* .large-space {
+      height: 300px; /* Adjust for desired white space */
+    /* } */
+
+
+    .full-width-image {
+        /* margin-top: 5%; */
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top:5%;
+    }
+
+    .home{
+    color:darkgrey;
+    text-decoration: blink;
+    }
+
+    .home:hover{
+      color: green;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="rm-outside.png" alt="First Image" class="image-top">
+      <div class="text-over-image"><a href="index.html" class="home">RESEARCH MATTRESS</a> IS</div>
+    </div>
+    <p class="text-below-image">JUDY LIEFF, MARIA MACIAK, ALICE XIAODI TANG.</p>
+    <div class="image-container">
+      <img src="rm-alice.png" alt="Second Image" class="image-sleep">
+    </div>
+    <div class="large-space"></div> <!-- Large white space -->
+  </div>
+  <img src="rm-pillow.png" alt="Bottom Full-Width Image" class="full-width-image">
+</body>
+</html>
