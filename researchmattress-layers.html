@@ -15,8 +15,6 @@
 
     .container {
       max-width: 100vw;
-      margin-left: 5%;
-      /* padding: 20px; */
     }
 
     .row {
@@ -24,27 +22,27 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 2%; /* Adjust spacing between rows */
+      margin-left: 5%;
+      margin-right: 5%;
     }
 
     .row .text {
       font-size: 2.5rem;
-      /* font-weight: bold; */
       flex: 1;
     }
 
-    .row .video {
+    .row .moss {
       flex: 1;
-      max-width: 30%;
+      width: 30%;
       height: auto;
       margin-right: 10%;
-      margin-top:3%;
+      margin-top: 3%;
     }
 
     .text-block {
       font-size: 2.5rem;
       text-align: left;
-      max-width: 60%;
-      /* margin: 50px 0; */
+      max-width: 75%;
     }
 
     .large-space {
@@ -52,45 +50,75 @@
     }
 
     .full-width-image {
-        /* margin-top: 5%; */
       width: 100%;
       height: auto;
       display: block;
-      margin-top:2%;
-    }
-    .home{
-    color:darkgrey;
-    text-decoration: blink;
+      margin-top: -18%;
+      position:relative;
+      z-index:5;
     }
 
-    .home:hover{
+    .home {
+      color: darkgrey;
+      text-decoration: none;
+    }
+
+    .home:hover {
       color: green;
     }
 
-  </style>
+    .fuzzy {
+      max-width: 30%;
+      margin-left: 70%;
+      margin-top: -12%;
+      position: relative; /* Needed for z-index */
+      z-index: 5; /* Higher value to stack above `.me` */
+    }
+
+    .me {
+      width: 100vw;
+      margin-top: -12%;
+      position: relative; /* Needed for z-index */
+      z-index: 0; /* Lower value to stack below `.fuzzy` */
+    }
+
+    .row-overlap {
+      position: relative; /* Ensure both `.fuzzy` and `.me` are positioned relative to this container */
+    }
+</style>
+
 </head>
 <body>
   <div class="container">
     <!-- Row with text and video -->
     <div class="row">
-      <div class="text"><a href="index.html" class="home">RESEARCH MATTRESS</a> LAYERS</div>
-      <video class="video" autoplay loop muted>
+      <div class="text"><a href="index.html" class="home">RESEARCH MATTRESS</a> LAYERS:</div>
+      <video class="moss" autoplay loop muted>
         <source src="spinning-moss.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
     <!-- Large centered text block -->
-    <div class="text-block">
-      
-      
-
-
+    <div class="row text-block">
       FIELDWORK, RITUALS, SOMATIC EXPLORATION,
       AND DIGITAL PROCESSING
       INTO TRANSMEDIA PORTALS & MOUNDS
       TO A POST-ANTHROPOCENTRIC FUTURE.
     </div>
+
+    <div class="row-overlap">
+      <img src="rm-holdsfuzzy.png" class="fuzzy">
+      <video class="me" autoplay loop muted>
+        <source src="rm-ME-smaller.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+    
+
+    </div>
+
+    
     <!-- <div class="text-block">
         WHERE ANTHROPOCENTRISMS AND COLONIALISMS ARE DISSOLVED AND DORMANT SENSES AWAKENED.
       </div>
