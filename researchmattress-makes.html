@@ -56,12 +56,26 @@
     }
 
     .full-width-image {
-        /* margin-top: 5%; */
       width: 100%;
       height: auto;
       display: block;
-      margin-top:-20%;
+      margin-top: -18%;
+      position:relative;
+      z-index:5;
     }
+
+    .row-overlap {
+      position: relative; /* Ensure both `.fuzzy` and `.me` are positioned relative to this container */
+    }
+
+    .flower {
+      max-width: 40%;
+      margin-left: 60%;
+      margin-top: 2%;
+      position: relative; /* Needed for z-index */
+      z-index: 5; /* Higher value to stack above `.me` */
+    }
+
 
     .home{
     color:darkgrey;
@@ -74,8 +88,10 @@
 
     .you{
       /* justify-self: center; */
-      margin-top:15%;
+      margin-top:-5%;
       width:100vw;
+      position: relative; /* Needed for z-index */
+      z-index: 0; /* Lower value to stack below `.fuzzy` */
 
     }
   </style>
@@ -105,10 +121,19 @@
     </div>
   </div> -->
 
+  <div class="row-overlap">
+    <img src="newME_V2.png" class="flower">
     <video class="you" autoplay loop muted>
       <source src="rm-YOU-small.mov" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+
+  </div>
+
+    <!-- <video class="you" autoplay loop muted>
+      <source src="rm-YOU-small.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
 
     <!-- Large white space -->
     <!-- <div class="large-space"></div> -->
