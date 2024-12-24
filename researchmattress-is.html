@@ -5,122 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research Mattress - IS</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f7f6f4;
-      color: black;
-      line-height: 1.6;
-    }
+    /* General Styles */
+/* General Styles */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f6f4;
+  color: black;
+  line-height: 1.6;
+}
 
-    .container {
-      max-width: 100vw;
-      padding:5%;
-      position: relative;
-    }
+.container {
+  max-width: 100vw;
+  padding: 5%;
+  position: relative;
+}
 
-    .image-container {
-      position: relative;
-      text-align: center;
-    }
+.image-container {
+  text-align: center;
+  margin-bottom: 4%;
+}
 
-    .text-over-image {
+.image-top {
+  width: 95%;
+  height: auto;
+  margin-top:-10%;
+  margin-bottom:-2%;
+}
+
+/* Adjust header text for mobile */
+
+
+.image-sleep {
+  max-width: 50%;
+  margin-top: -6%;
+  margin-bottom: -16%;
+}
+
+/* Header Text */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.text-header {
         text-align: left;
       position: absolute;
-      top: 10%;
+      top: 5%;
       /* right: 5%; */
       /* background-color: rgba(255, 255, 255, 0.8); Optional background for better readability */
       padding: 10px;
       font-size: 3rem;
     }
+/* Adjust header text for mobile */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 8%;
+  }
 
-    .image-top {
-      width: 95%;
-      height: auto;
-    }
+  .text-header {
+    position: static;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
 
-    .image-sleep {
-        max-width:50%;
-        margin-top: -5%;
-        margin-bottom:-16%;
-    }
-    
+/* Names Section with Separator */
+.text-names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  gap: 1%;
+  margin-top: 1%;
+  flex-wrap: wrap;
+}
 
-    .text-below-image {
-      text-align: center;
-      margin-top: 0%;
-      font-size:3rem;
-    }
+/* Individual Name Styling */
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  /* margin: 0 2%; */
+}
 
-    /* .large-space {
-      height: 300px; /* Adjust for desired white space */
-    /* } */
+/* Separator Styling */
+.separator {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 2%;
+}
+
+/* Responsive Layout for Names on Mobile */
+@media (max-width: 768px) {
+  .text-names {
+    flex-direction: column;
+    gap: 2%;
+    align-items: center;
+  }
+
+  .name,
+  .separator {
+    font-size: 1.2rem;
+    margin: 1% 0;
+  }
+}
+
+/* Manifesto Section */
+.manifesto {
+  font-size: 1.5rem;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section strong {
+  font-weight: bold;
+}
+
+.highlight {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* Full-Width Image */
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 5%;
+}
 
 
-    .full-width-image {
-        /* margin-top: 5%; */
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-top:5%;
-    }
-
-    .home{
-    color:darkgrey;
-    text-decoration: blink;
-    }
-
-    .home:hover{
-      color: green;
-    }
-
-    .manifesto{
-      font-size:1.5rem;
-    }
-
-
-    h1, h2 {
-      /* text-align: center; */
-      font-weight: bold;
-    }
-
-    .section {
-      margin-bottom: 2rem; /* Add spacing between sections */
-    }
-
-    .section strong {
-      font-weight: bold;
-    }
-
-    .highlight {
-      font-weight: bold;
-      text-transform: uppercase; /* For emphasis */
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    p {
-      margin: 0.5rem 0;
-    }
 
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="text-header">
+        <a href="index.html" class="home">RESEARCH MATTRESS</a> IS
+      </div>
+    </div>
+  
+    <!-- Image Section -->
     <div class="image-container">
       <img src="rm-outside.png" alt="First Image" class="image-top">
-      <div class="text-over-image"><a href="index.html" class="home">RESEARCH MATTRESS</a> IS</div>
     </div>
-    <p class="text-below-image">JUDY LIEFF, MARIA MACIAK, ALICE XIAODI TANG.</p>
+    
+    <!-- Names Section with Separator -->
+    <div class="text-names">
+      <div class="name">JUDY LIEFF</div>
+      <div class="separator">𓍊𓋼𓍊</div>
+      <div class="name">MARIA MACIAK</div>
+      <div class="separator">𓍊𓋼𓍊</div>
+      <div class="name">ALICE XIAODI TANG</div>
+    </div>
+  
+    <!-- Second Image Section -->
     <div class="image-container">
       <img src="rm-brick-corrected.png" alt="Second Image" class="image-sleep">
     </div>
-    <!-- <div class="large-space"></div>  -->
   </div>
+  
   <div class="manifesto container">
     <h1>IN SOLIDARITY WITH MORE-THAN-HUMAN LABOR</h1>
-
+  
     <div class="section">
       <p><strong>who are you trampling on today?</strong></p>
       <p>halt and praise the more-than-humans</p>
@@ -130,35 +199,36 @@
       <p>deep time processes turned into alienated labor</p>
       <p>producing devices of addiction and extinction</p>
     </div>
-
+  
     <div class="section">
       <p>what infections and foolishness will moss absorb from you?</p>
       <p>prepare self to co-liberate and join ancestral microorganismic parties!</p>
     </div>
-
+  
     <div class="section">
       <span class="highlight">MOBILE PORTALS MAKE BORDERS OBSOLETE!</span>
       <p>in our interspecies laboring</p>
       <p>we are but a dancing multispecies collage</p>
     </div>
-
+  
     <div class="section">
       <p>join animist resistance in ritual and defamiliarization,</p>
     </div>
-
+  
     <div class="section">
       <p><strong>who are you trampling on today?</strong></p>
       <p><strong>make space, don't trample.</strong></p>
       <p>no space? then submerge and merge!</p>
     </div>
-
+  
     <div class="section">
       <p>we arrived to unlearn anthropocentric lies!</p>
     </div>
-
+  
     <h2>DECENTERED HUMAN IS A HAPPY HUMAN</h2>
   </div>
-
+  
   <img src="rm-pillow.png" alt="Bottom Full-Width Image" class="full-width-image">
+  
 </body>
 </html>
