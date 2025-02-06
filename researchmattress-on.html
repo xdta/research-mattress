@@ -61,10 +61,14 @@
       margin-top:-57%;
     }
 
-    .home{
-    color:darkgrey;
-    text-decoration: blink;
-    }
+    .home {
+  position: relative;
+  z-index: 2;
+  text-decoration: blink;
+  color: darkgrey;
+  /* The blink text-decoration is deprecated; consider using underline if needed */
+}
+
 
     .home:hover{
       color: green;
